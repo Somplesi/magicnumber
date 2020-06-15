@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="magicnumber.views.GamePage">
+    <ContentPage.Content>
+        <!-- Un seul Bloc qui regroupe tout-->
+        <StackLayout Orientation="Vertical"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Center"
+                     Spacing="0">
+            <!-- Label Question-->
+            <Label Margin="0,0,0,10"
+                   TextColor="{StaticResource titleColor}"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Text="Devinez le nombre magique"
+                   FontSize="40">
+            </Label>
+            <!-- Label Entre 1 & 10-->
+            <Label x:Name="minMaxLabel"
+                   Margin="0,0,0,45"
+                   TextColor="{StaticResource titleColor}"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   Text="Entre x et x"
+                   FontSize="Body"
+                   FontAttributes="Italic">
+            </Label>
+            <!-- Zone de saisie du nombre-->
+            <Entry x:Name="entryNumber"
+                   Margin="130,0,130,10"
+                   BackgroundColor="{StaticResource shadowColor}"
+                   Placeholder="?"
+                   PlaceholderColor="White"
+                   FontSize="60"
+                   TextColor="White"
+                   HorizontalTextAlignment="Center"
+                   Keyboard="Numeric">
+            </Entry>
+            <!-- Bouton réponse-->
+            <Button Clicked="Button_Clicked"
+                    BackgroundColor="{StaticResource shadowColor}"
+                    Margin="130,0,130,100"
+                    Text="Devinez"
+                    TextColor="White" HeightRequest="-1">
+
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
